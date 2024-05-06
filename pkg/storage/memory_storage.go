@@ -13,6 +13,9 @@ import (
 // transaction/block/hash/from/to
 var memoryStorageMap = map[string]any{}
 
+// trick to assure that the current struct implements the refered interface
+var _ IStorage = (*MemoryStorage)(nil)
+
 type MemoryStorage struct {
 	mu sync.Mutex
 }
