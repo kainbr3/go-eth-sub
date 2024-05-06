@@ -97,6 +97,7 @@ http://localhost:8080/v1/subscriptions
 
 
 Response: 
+
 ![alt text](/doc/images/api/get-subs.png)
 
 URL: (POST - body { "address": "xxxxx"})
@@ -117,6 +118,7 @@ ex.: 2
 ```
 
 Response: 
+
 ![alt text](/doc/images/api/post-subs.png)
 
 
@@ -127,4 +129,5 @@ ex.: http://localhost:8080/v1/subscriptions/0x7D34bF994459c831d73A98bFC55B01ABA5
 
 
 Response: 
+
 ![alt text](/doc/images/api/del-subs.png)
