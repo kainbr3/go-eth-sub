@@ -71,7 +71,9 @@ A RESTful API to accept subscriptions via a websocket.
 A service to pull blockchain transactions, storing them on a Kafka topic.
 A consumer to read the topics, check transactions for subscribed addresses, and call the notification route to push notifications to users. Additionally, it could offer features such as real-time balance updates.
 
-## API Documentation
+## API Documentation 
+##### PS: Can be imported to insomnia/post using the file API Collection.json
+
 ![](/doc/images/api/routes.png "api")
 
 URL: (GET - no parameters required)
