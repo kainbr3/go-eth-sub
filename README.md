@@ -80,6 +80,7 @@ URL: (GET - no parameters required)
 http://localhost:8080/v1/eth/height
 
 Response: 
+
 ![alt text](/doc/images/api/height.png)
 
 URL: (GET - query param: address )
