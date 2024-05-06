@@ -70,3 +70,58 @@ PS: If this solution were to be made production-ready, it would consist of three
 A RESTful API to accept subscriptions via a websocket.
 A service to pull blockchain transactions, storing them on a Kafka topic.
 A consumer to read the topics, check transactions for subscribed addresses, and call the notification route to push notifications to users. Additionally, it could offer features such as real-time balance updates.
+
+## API Documentation
+![](/doc/images/api/routes.png "api")
+
+URL: (GET - no parameters required)
+http://localhost:8080/v1/eth/height
+
+Response: 
+![alt text](/doc/images/api/height.png)
+
+URL: (GET - query param: address )
+http://localhost:8080/v1/eth/transactions
+
+ex.: http://localhost:8080/v1/eth/transactions?address=0xbd0fCcdC19bC3b979e8E256b7B88AAe7C77A5BEC
+
+Response: 
+![alt text](/doc/images/api/transactions.png)
+
+
+URL: (GET - no parameters required)
+http://localhost:8080/v1/subscriptions
+
+
+Response: 
+![alt text](/doc/images/api/get-subs.png)
+
+URL: (POST - body { "address": "xxxxx"})
+http://localhost:8080/v1/subscriptions
+
+ex.: 1
+```
+{
+	"address":"0xbd0fCcdC19bC3b979e8E256b7B88AAe7C77A5BEC"
+}
+```
+
+ex.: 2
+```
+{
+	"address":"0x7D34bF994459c831d73A98bFC55B01ABA5768A34"
+}
+```
+
+Response: 
+![alt text](/doc/images/api/post-subs.png)
+
+
+URL: (DEL - url path param: address)
+http://localhost:8080/v1/subscriptions/{address}
+
+ex.: http://localhost:8080/v1/subscriptions/0x7D34bF994459c831d73A98bFC55B01ABA5768A34
+
+
+Response: 
+![alt text](/doc/images/api/del-subs.png)
